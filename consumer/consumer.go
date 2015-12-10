@@ -91,10 +91,7 @@ func New(cfg *config.Config, factory *command.CommandFactory, errLogger, infLogg
 	infLogger.Println("Done.")
 
 	infLogger.Println("Setting QoS... ")
-	// Attempt to preserve BC here
-	if cfg.Prefetch.Count == 0 {
-		cfg.Prefetch.Count = 3
-	}
+
 	if err := ch.Qos(cfg.Prefetch.Count, 0, cfg.Prefetch.Global); err != nil {
 		return nil, errors.New(fmt.Sprintf("Failed to set QoS: %s", err.Error()))
 	}
