@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/codegangsta/cli"
-	"github.com/ricbra/rabbitmq-cli-consumer/command"
-	"github.com/ricbra/rabbitmq-cli-consumer/config"
-	"github.com/ricbra/rabbitmq-cli-consumer/consumer"
+	"github.com/m-max/rabbitmq-cli-consumer/command"
+	"github.com/m-max/rabbitmq-cli-consumer/config"
+	"github.com/m-max/rabbitmq-cli-consumer/consumer"
 	"io"
 	"log"
 	"os"
